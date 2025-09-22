@@ -6,9 +6,10 @@ using UnityEngine.UIElements;
 
 public class Mover : MonoBehaviour
 {
-    void Update()
+    [SerializeField] private float _speed = 5f;
+
+    private void Update()
     {
-        float speed = 0.05f;
-        transform.Translate(Vector3.forward * speed);
+        transform.Translate(Vector3.forward * _speed * Time.deltaTime);
     }
 }

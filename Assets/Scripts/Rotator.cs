@@ -6,8 +6,8 @@ public class Rotator : MonoBehaviour
 {
     [SerializeField] private float _speed;
 
-    void Update()
+    private void Update()
     {
-        transform.RotateAround(transform.position, transform.up, _speed);
+        transform.RotateAround(transform.position, transform.up, _speed * Time.deltaTime);
     }
 }
